@@ -6,37 +6,59 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 04:35:34 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/07 09:09:38 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/11 17:38:05 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+	// char	*last;
+	// int n;
+
+	// n = 0;
+
+	// while (*s)
+	// {
+	// 	s++;
+	// 	n++;
+	// }
+	// while (n >= 0)
+	// {
+	// 	if (*s == c)
+	// 		return last = (char *)s;
+	// 	s++;
+	// }
+	// return (last);
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*last;
-
-	last = NULL;
-	if (c == '\0')
-	{
-		while (*s)
-		{
-			last = (char *)s;
-			s++;
-		}
-		return (last);
-	}
 	while (*s)
 	{
-		if (*s == c)
-			last = (char *)s;
 		s++;
 	}
-	if (last && *last == c)
-		return ((char *)last);
-	else
-		return (NULL);
+	
+	while (*s >=0)
+	{
+		if((char)c == *s)
+			return ((char *)(s));
+		s--;
+	}
+	return (0);
+	
+	 
+	 
+	 
 }
+
+
+// int main(){
+   
+//    char a[] = "haithem bendjbal@ah";
+//    int b = '@';
+//    printf("%s\n",ft_strrchr(a,b));
+
+
+// }
 
 /* int main(void) {
     char str[100];

@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 06:29:38 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/07 06:53:48 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:48:36 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	unsigned char	target;
+
+	target = (unsigned char)c;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == target)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (target == '\0')
 		return ((char *)s);
 	return (NULL);
 }
@@ -42,4 +45,5 @@ char	*ft_strchr(const char *s, int c)
     else
         printf("Character '%c' not found in the string.\n", target);
     return 0;
-} */
+}
+ */

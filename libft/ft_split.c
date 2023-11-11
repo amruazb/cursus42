@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:10:33 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/11 14:43:14 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/11 15:37:54 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	**ft_split(const char *s, char c)
 	splitwd[i] = NULL;
 	return (splitwd);
 } */
-int	main(void)
+/* int	main(void)
 {
 	int i = 0;
 	const char	*input = "This is a test string";
@@ -126,4 +126,4 @@ int	main(void)
 		}
 	}
 	return (0);
-}
+} */
