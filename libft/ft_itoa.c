@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	count_digits(int n)
+int count_digits(int n)
 {
-	int	digitcount;
+	int digitcount;
 
 	digitcount = 1;
 	if (n < 0)
@@ -30,12 +30,12 @@ int	count_digits(int n)
 	return (digitcount);
 }
 
-char	*ft_itoa(int n)
+char *ft_itoa(int n)
 {
-	char	*result;
-	int		count;
-	int		original_n;
-	int		lastdigit;
+	char *result;
+	int count;
+	int original_n;
+	int lastdigit;
 
 	original_n = n;
 	count = count_digits(n);
@@ -57,41 +57,17 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 	return (result);
 }
-// int main() {
-//     int number = -12345;
-//     char *str = int_to_str(number);
 
-//     if (str != NULL) {
-//         printf("Integer: %d\nString: %s\n", number, str);
-//         free(str);
-//     } else {
-//         printf("Memory allocation failed.\n");
-//     }
 
-//     return 0;
-// }
-
-// void	test_itoa(int n)
+// int main()
 // {
-// 	char	*result;
+// 	printf("%s\n", ft_itoa(0));
+// 	printf("%s\n", ft_itoa(123));
+// 	printf("%s\n", ft_itoa(-456));
+// 	printf("%s\n", ft_itoa(7890));
+// 	printf("%s\n", ft_itoa(-12345));
+// 	printf("%s\n", ft_itoa(-2147483648));
+// 	printf("%s\n", ft_itoa(2147483647));
 
-// 	result = ft_itoa(n);
-// 	if (result != NULL)
-// 	{
-// 		printf("ft_itoa(%d) = %s\n", n, result);
-// 		free(result);
-// 	}
-// 	else
-// 		printf("Memory allocation failed for int_to_str(%d)\n", n);
 // }
 
-// int	main(void)
-// {
-// 	test_itoa(0);
-// 	test_itoa(123);
-// 	test_itoa(-456);
-// 	test_itoa(7890);
-// 	test_itoa(-12345);
-// 	test_itoa(-2147483648);
-// 	test_itoa(2147483647);
-// }

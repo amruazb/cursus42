@@ -19,12 +19,29 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
-	while (n-- > 0)
+	while (n--)
 	{
 		*d++ = *s++;
 	}
 	return (dst);
 }
+
+/* int main()
+{
+	char src[100] = "I am Batman";
+	size_t n = ft_strlen(src);
+	char des[100];
+
+	printf("Enter the source: ");
+	scanf("%s", src);
+	printf("Enter the size: ");
+	scanf("%ld", &n);
+	ft_memcpy(des,src,n);
+	des[n] = '\0';
+	printf("%s\n",des); 
+}
+ */
+
 
 // int main(void)
 // {

@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		len++;
 	}
-	result = (char *)malloc(len + 1);
+	result = malloc(len + 1);
 	if (result == NULL)
 		return (NULL);
 	p = result;
@@ -40,3 +40,30 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	*p = '\0';
 	return (result);
 }
+
+// char ft_toupperchar(unsigned int index, char c)
+// {
+//     // Example function: converts characters to uppercase
+//     if (c >= 'a' && c <= 'z')
+//         return c - 'a' + 'A';
+// 	else
+//         return c;
+// }
+
+// int main() 
+// {
+//     char input[] = "Hello, World!";
+//     char *result = ft_strmapi(input, ft_toupperchar);
+
+//     if (result != NULL) {
+//         printf("Original string: %s\n", input);
+//         printf("Transformed string: %s\n", result);
+
+//         // Don't forget to free the allocated memory
+//         free(result);
+//     } else {
+//         printf("Memory allocation failed!\n");
+//     }
+
+//     return 0;
+// }
