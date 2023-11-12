@@ -6,61 +6,34 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 04:35:34 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/11 17:38:05 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/12 10:16:14 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-	// char	*last;
-	// int n;
-
-	// n = 0;
-
-	// while (*s)
-	// {
-	// 	s++;
-	// 	n++;
-	// }
-	// while (n >= 0)
-	// {
-	// 	if (*s == c)
-	// 		return last = (char *)s;
-	// 	s++;
-	// }
-	// return (last);
 char	*ft_strrchr(const char *s, int c)
 {
+	int	n;
+
+	n = 0;
 	while (*s)
 	{
 		s++;
+		n++;
 	}
-	
-	while (*s >=0)
+	while (n >= 0)
 	{
-		if((char)c == *s)
+		if ((char)c == *s)
 			return ((char *)(s));
 		s--;
+		n--;
 	}
 	return (0);
-	
-	 
-	 
-	 
 }
 
-
-// int main(){
-   
-//    char a[] = "haithem bendjbal@ah";
-//    int b = '@';
-//    printf("%s\n",ft_strrchr(a,b));
-
-
-// }
-
-/* int main(void) {
+/* int main(void) 
+{
     char str[100];
     char target;
     printf("Enter a string: ");
@@ -77,8 +50,8 @@ char	*ft_strrchr(const char *s, int c)
     char *result = ft_strrchr(str, target);
 
     if (result != NULL) {
-        printf("Last occurrence of character '%c' 
-		found at position: %ld\n", target, (long)(result - str) + 1);
+        printf("Last occurrence of character '%c' found 
+		at position: %ld\n", target, (long)(result - str) + 1);
     } else {
         printf("Character '%c' not found in the string.\n", target);
     }

@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 07:21:17 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/11 15:36:47 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/12 09:56:44 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,4 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	printf("%s\n", ft_substr(g, gs, gl)); // Should print "is a test"
 
 	return 0;
-}
- */
+ }*/

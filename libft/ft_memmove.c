@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:46:25 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/11 16:24:40 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/12 08:29:23 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/* int main(void)
+/*int main(void)
 {
 	char data[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char buffer[14];
@@ -47,42 +46,41 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	printf("%s\n",ft_memmove(buffer + 3,data, 13));
 } */
 
-/* int main() {
-    // Test Case 1: Non-overlapping regions
-    char source[] = "Hello, World!";
-    char destination[14];
+// int main() {
+//     // Test Case 1: Non-overlapping regions
+//     char source[] = "Hello, World!";
+//     char destination[14];
 
-    ft_memmove(destination, source, 13);
+//     ft_memmove(destination, source, 13);
 
-    printf("Test Case 1:\n");
-    printf("Result: %s\n\n", destination);
+//     printf("Test Case 1:\n");
+//     printf("Result: %s\n\n", destination);
 
-    // Test Case 2: Overlapping regions with source before destination
-    char data[] = "Hello, World!";
-    char buffer[14];
+//     // Test Case 2: Overlapping regions with source before destination
+//     char data[] = "Hello, World!";
+//     char buffer[14];
 
-    ft_memmove(buffer, data, 13);
+//     ft_memmove(buffer, data, 13);
 
-    printf("Test Case 2:\n");
-    printf("Result: %s\n\n", buffer);
+//     printf("Test Case 2:\n");
+//     printf("Result: %s\n\n", buffer);
 
-    // Test Case 3: Overlapping regions with source after destination
-    char text[] = "Hello, World!";
-    char result[14];
+//     // Test Case 3: Overlapping regions with source after destination
+//     char text[] = "Hello, World!";
+//     char result[14];
 
-    ft_memmove(result + 7, result, 7);
+//     ft_memmove(result + 7, result, 7);
 
-    printf("Test Case 3:\n");
-    printf("Result: %s\n\n", result);
+//     printf("Test Case 3:\n");
+//     printf("Result: %s\n\n", result);
 
-    // Test Case 4: Overlapping regions with partial overlap
-    char str[] = "Hello, World!";
-    char buffer2[14];
+//     // Test Case 4: Overlapping regions with partial overlap
+//     char str[] = "Hello, World!";
 
-    ft_memmove(buffer2 + 3, buffer2, 11);
+//     ft_memmove(str + 1, str, 4);
 
-    printf("Test Case 4:\n");
-    printf("Result: %s\n\n", buffer2);
+//     printf("Test Case 4:\n");
+//     printf("Result: %s\n\n", str);
 
-    return 0;
-} */
+//     return 0;
+// } 

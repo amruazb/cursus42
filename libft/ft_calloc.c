@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:14:01 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/06 21:05:23 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/12 10:21:09 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	tlen;
 	void	*ptr;
 
-	if (count == 0)
-		return (0);
 	tlen = count * size;
 	ptr = malloc(tlen);
+	if (ptr == NULL)
+		return (NULL);
 	if (ptr)
 		ft_bzero(ptr, tlen);
 	return (ptr);
