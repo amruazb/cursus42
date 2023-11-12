@@ -6,11 +6,13 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:55:23 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/08 10:11:41 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/12 13:56:34 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_toupper(int c);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -41,29 +43,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-// char ft_toupperchar(unsigned int index, char c)
-// {
-//     // Example function: converts characters to uppercase
-//     if (c >= 'a' && c <= 'z')
-//         return c - 'a' + 'A';
-// 	else
-//         return c;
-// }
-
-// int main() 
-// {
-//     char input[] = "Hello, World!";
-//     char *result = ft_strmapi(input, ft_toupperchar);
-
-//     if (result != NULL) {
-//         printf("Original string: %s\n", input);
-//         printf("Transformed string: %s\n", result);
-
-//         // Don't forget to free the allocated memory
-//         free(result);
-//     } else {
-//         printf("Memory allocation failed!\n");
+// int main() {
+//     char input_string[] = "HELLO, World!";
+//     char *result_string;
+//		ft_strmapi(input_string, (char (*)(unsigned int, char))ft_toupper);
+//     if (result_string == NULL) 
+//	   {
+//         printf("Memory allocation failed.\n");
+//         return 1;
 //     }
+//     printf("Original string: %s\n", input_string);
+//     printf("Mapped string:   %s\n", result_string);
+//     free(result_string);  // Don't forget to free the allocated memory
 
 //     return 0;
 // }

@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 04:15:10 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/07 04:16:59 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:21:39 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	const unsigned char	*s;
-	unsigned char		*d;
+	const char	*s;
+	char		*d;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	while (n--)
+	s = src;
+	d = dst;
+	if (dst == NULL && src == NULL)
+	{
+		return (NULL);
+	}
+	while (n-- > 0)
 	{
 		*d++ = *s++;
 	}
