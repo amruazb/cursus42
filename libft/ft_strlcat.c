@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 04:31:28 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/07 04:33:31 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 16:26:41 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (dstsize + slen);
 	space = dstsize - dlen - 1;
 	if (slen <= space)
+	{
 		ft_memcpy(dst + dlen, src, slen);
+		dst[dlen + slen] = '\0';
+	}
 	else
 	{
 		ft_memcpy(dst + dlen, src, space);
