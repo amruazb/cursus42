@@ -6,18 +6,18 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:29:33 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/12 13:03:58 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:54:08 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
 # include <stdio.h>
+# include <stddef.h>
+# include <limits.h>
 # include <string.h>
 # include <ctype.h>
 
@@ -30,8 +30,13 @@ int		ft_isalnum(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 int		ft_isspace(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 int		ft_atoi(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
 char	*ft_strndup(const char *s, size_t n);
@@ -64,12 +69,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-// typedef struct s_split_next
-// {
-// 	size_t	start;
-// 	size_t	length;
-// }	t_split_next;
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

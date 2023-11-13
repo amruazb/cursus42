@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:46:25 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/12 08:29:23 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 09:18:06 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 //     // Test Case 2: Overlapping regions with source before destination
 //     char data[] = "Hello, World!";
-//     char buffer[14];
+//     char tring[14];
 
-//     ft_memmove(buffer, data, 13);
+//     ft_memmove(tring, data, 13);
 
 //     printf("Test Case 2:\n");
 //     printf("Result: %s\n\n", buffer);
@@ -77,7 +77,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 //     // Test Case 4: Overlapping regions with partial overlap
 //     char str[] = "Hello, World!";
 
-//     ft_memmove(str + 1, str, 4);
+//     ft_memmove(str + 1, str, 11);
 
 //     printf("Test Case 4:\n");
 //     printf("Result: %s\n\n", str);

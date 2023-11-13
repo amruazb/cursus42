@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:35:47 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/12 10:35:56 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:52:46 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int count_digits(int n)
 {
-	int digitcount;
+	long digitcount;
 
 	digitcount = 1;
 	if (n < 0)
@@ -34,12 +34,12 @@ char *ft_itoa(int n)
 {
 	char *result;
 	int count;
-	int original_n;
-	int lastdigit;
+	long original_n;
+	long lastdigit;
 
 	original_n = n;
 	count = count_digits(n);
-	if (n == INT_MIN)
+	if (n == -2147483647 -1)
 		return (ft_strdup("-2147483648"));
 	if (n < 0)
 		n = -n;
@@ -67,7 +67,10 @@ char *ft_itoa(int n)
 // 	printf("%s\n", ft_itoa(7890));
 // 	printf("%s\n", ft_itoa(-12345));
 // 	printf("%s\n", ft_itoa(-2147483648));
+// 	printf("%s\n", ft_itoa(7382147483648));
+// 	printf("%s\n", ft_itoa(2147483649));
 // 	printf("%s\n", ft_itoa(2147483647));
+// 	free(result);
 
 // }
 

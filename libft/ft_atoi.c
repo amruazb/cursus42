@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 15:01:40 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/06 15:39:28 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:48:12 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int	num;
-	int	negative;
+	long	num;
+	long	negative;
 
 	num = 0;
 	negative = 1;
@@ -34,3 +34,13 @@ int	ft_atoi(const char *str)
 	}
 	return (num * negative);
 }
+
+// int main()
+// {
+// 	printf("%d\n",ft_atoi("-9223372036854775808"));
+// 	printf("%d\n",ft_atoi("9223372036854775807"));
+// 	printf("%d\n",ft_atoi("-332412"));
+// 	printf("%d\n",ft_atoi("-2147483647"));
+// 	printf("%d\n",ft_atoi("2147483649"));
+// 	printf("%d\n",ft_atoi("34"));
+// }

@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 07:16:29 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/07 07:20:28 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 10:03:52 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,9 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
-/* int main()
-{
-    char input[256];
-    printf("Enter a string: ");
-    fgets(input, sizeof(input), stdin);
-   if (input[ft_strlen(input) - 1] == '\n')
-	   input[ft_strlen(input) - 1] = '\0';
-
-    char *result = ft_strdup(input);
-    printf("Copied string is: %s\n", result);
-
-    free(result);
-    return 0;
-} */
+//  #include <stdio.h>
+// int	main(int ac, char **av)
+// {
+// 	if (ac == 2)
+// 		printf("%s\n", ft_strdup(av[1]));
+// }
