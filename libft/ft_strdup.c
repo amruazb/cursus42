@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 07:16:29 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/13 10:03:52 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:20:08 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t	len; 
+	size_t	len;
 	char	*dup;
 
 	len = ft_strlen(s);

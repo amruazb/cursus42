@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 04:15:10 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/11 16:21:39 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:23:21 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	printf("%s\n",des); 
 }
  */
-
-
 // int main(void)
 // {
 //     char src[50];

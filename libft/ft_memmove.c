@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 14:46:25 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/13 09:18:06 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:19:37 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	source = (const unsigned char *)src;
 	if (dst == src)
 		return (dst);
-	if (destination < source) 
+	if (destination < source)
 	{
 		ft_memcpy(destination, source, len);
 	}

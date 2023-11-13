@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 06:29:38 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/12 10:14:56 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:23:13 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,3 @@ char	*ft_strchr(const char *s, int c)
         printf("Character '%c' not found in the string.\n", target);
     return 0;
 }  */
- 

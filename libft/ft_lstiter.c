@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:32:55 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/13 16:21:29 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:19:04 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 //     return 0;
 // }
-
