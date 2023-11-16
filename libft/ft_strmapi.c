@@ -6,13 +6,11 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:55:23 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/12 13:56:34 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:51:27 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_toupper(int c);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -43,18 +41,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-// int main() {
-//     char input_string[] = "HELLO, World!";
-//     char *result_string;
-//		ft_strmapi(input_string, (char (*)(unsigned int, char))ft_toupper);
-//     if (result_string == NULL) 
-//	   {
-//         printf("Memory allocation failed.\n");
-//         return 1;
-//     }
-//     printf("Original string: %s\n", input_string);
-//     printf("Mapped string:   %s\n", result_string);
-//     free(result_string);  // Don't forget to free the allocated memory
 
-//     return 0;
-// }
+void example_function(unsigned int index, char *c)
+{
+    printf("Character at index %d: %c\n", index, *c);
+}
+
+int main()
+{
+    char str[] = "Hello, World!";
+    ft_strmapi(str, example_function);
+
+    return 0;
+}

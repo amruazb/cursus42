@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 07:12:30 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/07 07:15:57 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/14 08:48:05 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,31 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-/* 
-int main(void)
-{
-    char haystack[100];
-    char needle[100];
-    size_t len;
-    printf("Enter the  string: ");
-    scanf("%s", haystack);
+// int main(void)
+// {
+//     // char haystack[100];
+//     // char needle[100];
+//     // size_t len;
+//     // printf("Enter the  string: ");
+//     // scanf("%s", haystack);
 
-    printf("Enter the substring: ");
-    scanf("%s", needle);
+//     // printf("Enter the substring: ");
+//     // scanf("%s", needle);
 
-    printf("Enter the maximum length to search: ");
-    scanf("%zu", &len);
+//     // printf("Enter the maximum length to search: ");
+//     // scanf("%zu", &len);
 
-    char *result = ft_strnstr(haystack, needle, len);
+//     // char *result = ft_strnstr(haystack, needle, len);
 
-    if (result != NULL)
-	    printf("Needle found at position: %ld\n", result - haystack);
-	else
-		printf("Needle not found in the haystack.\n");
-} */
+//     // if (result != NULL)
+// 	//     printf("Needle found at position: %s\n", result);
+// 	// else
+// 	// 	printf("Needle not found in the haystack.\n");
+
+// 	char b[]= " def ghj abc ";
+// 	char d [] = "  bc";
+// 	// char *ptr = ft_strnstr(b,d,sizeof(b));
+// 	// printf("%s\n" , ptr);
+// 	char *ptr  = strnstr(b,d,sizeof(b));
+// 	printf("%s\n" ,ptr);
+// }

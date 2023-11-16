@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:10:33 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/13 13:48:07 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:18:29 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,24 +59,13 @@ char	**ft_split(const char *s, char c)
 	return (split);
 }
 
-/* int	main(void)
-{
-	int i = 0;
-	const char	*input = "This is a test string";
-	char		separator = ' ';
-
-	char	**result = ft_split(input, separator);
-	if (result) 
-	{
-		while(result[i] != NULL)
-		{
-			{
-				printf("Word %d: %s\n", i, result[i]);
-				free(result[i]);
-			}
-			free(result);
-			i++;
-		}
-	}
-	return (0);
-} */
+// int main()
+// {
+// 	char **str;
+// 	str = ft_split("Hello world , kd fdspf fv",' ');
+// 	while(*str)
+// 	{
+// 		printf("%s\n",*str++);
+// 	}
+// 	free(*str); 
+// }

@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 07:21:17 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/13 10:50:05 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:12:34 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	}
 	if (len > s_len - start)
 		len = s_len - start;
-	substr = malloc(len + 1);
+	substr = ft_calloc(len + 1, sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	ft_memcpy(substr, s + start, len);
