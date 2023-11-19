@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_conditions(char format, va_list args)
+void	ft_conditions(char format, va_list args, int *count)
 {
 	if (format == 'c')
 		ft_putchar(va_arg(args, int));
@@ -32,24 +32,28 @@ void	ft_conditions(char format, va_list args)
 		ft_putchar('%');
 	else
 		ft_putchar(format);
+	
+	(*count)++;
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
+	int		count;
 
+	count = 0;
 	va_start(args, format);
 	while (*format != '\0')
 	{
 		if (*format == '%')
 		{
 			format++;
-			ft_conditions(*format, args);
+			ft_conditions(*format, args, &count);
 		}
 		else
-			ft_putchar(*format);
+			count += ft_putchar(*format);
 		format++;
 	}
 	va_end(args);
-	return (0);
+	return (count);
 }

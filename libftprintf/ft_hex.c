@@ -23,3 +23,12 @@ void	ft_print_hex(unsigned long num, int uppercase)
 		ft_print_hex(num / 16, uppercase);
 	ft_putchar(hex_chars[num % 16]);
 }
+
+void	ft_printptr(va_list args)
+{
+	unsigned long	ptr;
+
+	ptr = va_arg(args, unsigned long);
+	ft_putstr("0x");
+	ft_print_hex(ptr, 0);
+}

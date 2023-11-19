@@ -20,8 +20,8 @@
 void	ft_print_hex(unsigned long num, int uppercase);
 int		ft_printf(const char *format, ...);
 size_t	ft_strlen(char *str);
-void	ft_putchar(char c);
-void	ft_putstr(const char *str);
+int     ft_putchar(char c);
+int 	ft_putstr(const char *str);
 void	ft_putnbr(int num);
 void	ft_putunsignbr(unsigned int num);
 void	ft_printptr(va_list args);

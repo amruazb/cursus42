@@ -14,40 +14,43 @@
 
 size_t	g_printed_chars = 0;
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	g_printed_chars++;
+	return (1);
 }
 
-void	ft_putstr(const char *str)
+int	ft_putstr(const char *str)
 {
+	int	count;
+
+	count = 0;
 	while (*str)
-		ft_putchar(*str++);
+		count += ft_putchar(*str++);
+	return (count);
 }
 
 void	ft_putnbr(int num)
 {
+	// int	count;
+
+	// count = 0;
 	if (num < 0)
 	{
 		ft_putchar('-');
 		num = -num;
 	}
-	ft_putunsignbr(num);
+	ft_putunsignbr((unsigned int)num);
 }
 
 void	ft_putunsignbr(unsigned int num)
 {
+	// int	count;
+
+	// count = 0;
 	if (num >= 10)
 		ft_putunsignbr(num / 10);
 	ft_putchar(num % 10 + '0');
 }
 
-void	ft_printptr(va_list args)
-{
-	unsigned long	ptr;
 
-	ptr = va_arg(args, unsigned long);
-	ft_putstr("0x");
-	ft_print_hex(ptr, 0);
-}
