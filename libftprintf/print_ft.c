@@ -32,12 +32,13 @@ int	ft_putstr(const char *str)
 
 void	ft_putnbr(int num)
 {
-	// int	count;
+	int	count;
 
-	// count = 0;
+	count = 0;
 	if (num < 0)
 	{
 		ft_putchar('-');
+		count++;
 		num = -num;
 	}
 	ft_putunsignbr((unsigned int)num);
@@ -45,12 +46,14 @@ void	ft_putnbr(int num)
 
 void	ft_putunsignbr(unsigned int num)
 {
-	// int	count;
+	int	count;
 
-	// count = 0;
+	count = 0;
 	if (num >= 10)
-		ft_putunsignbr(num / 10);
+		count = count + ft_putunsignbr(num / 10);
+	count++;
 	ft_putchar(num % 10 + '0');
+	return count;
 }
 
 
