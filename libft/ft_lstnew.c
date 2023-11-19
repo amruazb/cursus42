@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 09:26:20 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/14 11:23:30 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/11/19 11:53:54 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,24 @@ t_list	*ft_lstnew(void *content)
 	return (NULL);
 }
 
-void	del(void *content)
-{
-	content = 0;
-}
+// void	del(void *content)
+// {
+// 	content = 0;
+// }
 
-int main()
-{
-	t_list *name1 = ft_lstnew("Aamir");
-	t_list *second = ft_lstnew("Zuhail");
-	t_list *third = ft_lstnew("Basheer");
-	ft_lstadd_back(&name1,second);
-	ft_lstadd_back(&name1,third);
-	t_list *current = name1;
-	t_list **temp = &current;
-	while (current)
-	{
-		printf("%s\n",(char *)current->content);
-		current = current->next;
-	}
-	 ft_lstclear(temp, del);
-}
+// int main()
+// {
+// 	t_list *name1 = ft_lstnew("Aamir");
+// 	t_list *second = ft_lstnew("Zuhail");
+// 	t_list *third = ft_lstnew("Basheer");
+// 	ft_lstadd_back(&name1,second);
+// 	ft_lstadd_back(&name1,third);
+// 	t_list *current = name1;
+// 	t_list **temp = &current;
+// 	while (current)
+// 	{
+// 		printf("%s\n",(char *)current->content);
+// 		current = current->next;
+// 	}
+// 	 ft_lstclear(temp, del);
+// }

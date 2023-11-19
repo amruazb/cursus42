@@ -12,8 +12,6 @@
 
 #include "ft_printf.h"
 
-size_t	g_printed_chars = 0;
-
 int	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -25,12 +23,20 @@ int	ft_putstr(const char *str)
 	int	count;
 
 	count = 0;
-	while (*str)
-		count += ft_putchar(*str++);
+	if (!str || !*str)
+		return (0);
+	else
+	{
+		while (*str)
+		{
+			count += ft_putchar (*str);
+			str++;
+		}
+	}
 	return (count);
 }
 
-void	ft_putnbr(int num)
+int	ft_putnbr(int num)
 {
 	int	count;
 
@@ -41,19 +47,21 @@ void	ft_putnbr(int num)
 		count++;
 		num = -num;
 	}
-	ft_putunsignbr((unsigned int)num);
+	if (num < 0)
+		count += ft_putunsignbr((unsigned int)-num);
+	else
+		count += ft_putunsignbr((unsigned int)num);
+	return (count);
 }
 
-void	ft_putunsignbr(unsigned int num)
+int	ft_putunsignbr(unsigned int num)
 {
 	int	count;
 
 	count = 0;
 	if (num >= 10)
-		count = count + ft_putunsignbr(num / 10);
+		count += ft_putunsignbr(num / 10);
 	count++;
 	ft_putchar(num % 10 + '0');
-	return count;
+	return (count);
 }
-
-
