@@ -1,0 +1,2 @@
+file 0 is here
+here file 0 nextline

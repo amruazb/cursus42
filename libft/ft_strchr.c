@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 06:29:38 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/13 17:23:13 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/12/11 23:30:38 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,14 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
+// char	*ft_strchr(const char *s, int c)
+// {
+// 	while (*s != '\0' && *s != (char)c)
+// 		s++;
+// 	if (*s == (char)c)
+// 		return ((char *)s);
+// 	return (NULL);
+// }
 /* int main(void)
 {
     char str[100];

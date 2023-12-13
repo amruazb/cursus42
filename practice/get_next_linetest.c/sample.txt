@@ -1,0 +1,2 @@
+Hello there is newline here
+it is the second line and no newline

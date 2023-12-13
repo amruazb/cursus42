@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:14:01 by aabashee          #+#    #+#             */
-/*   Updated: 2023/11/14 08:22:40 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:24:37 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, tlen);
 	return (ptr);
 }
-
+	// if (size && (count > UINT32_MAX / size))
+	// 	return (NULL);
 /* int main(int ac, char *av[]) 
 {
     if (ac < 3) 
