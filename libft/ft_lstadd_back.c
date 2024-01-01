@@ -28,3 +28,23 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		*lst = new;
 }
+/* int main()
+{
+	t_list *name1 = ft_lstnew("Hello");
+	t_list *name2 = ft_lstnew("world");
+	t_list *name3 = ft_lstnew("my");
+	t_list *name4 = ft_lstnew("is");
+
+	ft_lstadd_back(&name1, name3);
+	ft_lstadd_back(&name1,name2);
+	ft_lstadd_front(&name1, name4);
+	t_list *current = name1;
+	t_list **temp = &current;
+	printf("%d\n", ft_lstsize(name1));
+	while (current)
+	{
+		printf("%s\n", (char *)current->content);
+		current = current->next;
+	}
+	ft_lstclear(temp, del);
+} */
