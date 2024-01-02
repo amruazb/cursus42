@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 12:03:55 by aabashee          #+#    #+#             */
-/*   Updated: 2023/12/11 20:39:31 by aabashee         ###   ########.fr       */
+/*   Updated: 2023/12/27 13:00:18 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,10 @@ int main() {
     printf("std printf   : ");
     printf(format, charValue, stringValue, pointerValue, intValue, intValue, uintValue, hexValue, hexValue);
     printf("\n");
+	ft_printf("return:%d\n",ft_printf("Hello, World"));
+	printf("return:%d\n",printf("Hello, World"));
 
+	
     // Testing ft_printf
     printf("ft_printf    : ");
     ft_printf(format, charValue, stringValue, pointerValue, intValue, intValue, uintValue, hexValue, hexValue);
