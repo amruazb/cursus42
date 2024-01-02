@@ -56,7 +56,7 @@ void	sort_stacks(t_stack_data **a, t_stack_data **b)
 	min_on_top(a);
 }
 
-void prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name)
+void prep_for_push(t_stack_data **stack, t_stack_data *top_node, char stack_name)
 {
 	while (*stack != top_node)
 	{
