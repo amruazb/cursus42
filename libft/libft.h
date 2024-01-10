@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:12:46 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/02 22:39:31 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/07 12:57:47 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,6 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //Extras
 void		*ft_realloc(void *ptr, size_t new_size, size_t old_size);
-char		**split(char *s, char c);
+char		**ps_split(char *s);
 
 #endif

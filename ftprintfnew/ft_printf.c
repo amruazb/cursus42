@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 12:03:55 by aabashee          #+#    #+#             */
-/*   Updated: 2023/12/27 13:00:18 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/07 21:38:31 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_conditions(char format, va_list args)
 	else if (format == 'u')
 		return (ft_putunsignbr(va_arg(args, unsigned int)));
 	else if (format == 'x')
-		return (ft_print_hex(va_arg(args, unsigned  int), 0));
+		return (ft_print_hex(va_arg(args, unsigned int), 0));
 	else if (format == 'X')
 		return (ft_print_hex(va_arg(args, unsigned int), 1));
 	else if (format == '%')
@@ -56,10 +56,12 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-
-int main() {
-    // Example usage of ft_printf with various format specifiers
-    const char* format = "Testing ft_printf: %c %s %p %d %i %u %x %X %%";
+/* int main() 
+{
+    // Example usage of ft_printf with various
+	 format specifiers
+    const char* format = "Testing ft_printf:
+	 %c %s %p %d %i %u %x %X %%";
     
     // Example values corresponding to the format specifiers
     char charValue = 'A';
@@ -71,7 +73,8 @@ int main() {
     
     // Testing ft_printf with std printf for comparison
     printf("std printf   : ");
-    printf(format, charValue, stringValue, pointerValue, intValue, intValue, uintValue, hexValue, hexValue);
+    printf(format, charValue, stringValue, pointerValue,
+	intValue, intValue, uintValue, hexValue, hexValue);
     printf("\n");
 	ft_printf("return:%d\n",ft_printf("Hello, World"));
 	printf("return:%d\n",printf("Hello, World"));
@@ -79,8 +82,9 @@ int main() {
 	
     // Testing ft_printf
     printf("ft_printf    : ");
-    ft_printf(format, charValue, stringValue, pointerValue, intValue, intValue, uintValue, hexValue, hexValue);
+    ft_printf(format, charValue, stringValue, pointerValue, intValue,
+	 intValue, uintValue, hexValue, hexValue);
     printf("\n");
 
     return 0;
-}
+} */
