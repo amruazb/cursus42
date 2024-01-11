@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:22:39 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/10 14:05:18 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/11 18:25:19 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,34 @@ int main()
 		printf("%s\n", *s++);
 	free(*s);
 }
+
+// char **ps_split(char *s)
+// {
+//     char **split;
+//     char *current;
+
+//     split = malloc(4096 * sizeof(char *));
+//     if (!split)
+//         return NULL;
+
+//     while (*s == ' ' && s++)
+//         ;
+
+//     while (*s)
+//     {
+//         *split = malloc(1024);
+//         if (!*split)
+//             return NULL;
+
+//         current = *split++;
+//         while (*s != ' ' && *s)
+//             *current++ = *s++;
+
+//         while (*s == ' ' && *s++)
+//             ;
+//         *current = '\0';
+//     }
+
+//     *split = NULL;
+//     return split;
+// }

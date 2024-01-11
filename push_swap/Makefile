@@ -1,31 +1,26 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
-SRC_DIR = .
-OBJ_DIR = obj
-INCLUDES = -I.
+CFLAGS = -Wall -Wextra -Werror -g3
 
-SRCS = ps_main.c ps_sort.c create_list.c ps_minmax.c ps_split.c free_error.c \
-       ps_moves.c ps_moves2.c ps_createstack.c ps_print.c ps_atoi.c ps_sort2.c \
-	   create_list2.c
-OBJS = $(patsubst %.c, $(OBJ_DIR)/%.o, $(SRCS))
+SRC = a_push_swap.c b_ps_input.c c_create_node.c
+OBJ = $(SRC:.c=.o)
 
-NAME = push_swap
+TARGET = push_swap
 
-all: $(NAME)
+all: $(TARGET)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
 
-$(OBJ_DIR)/%.o: %.c
-	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(TARGET)
 
 re: fclean all
 
 .PHONY: all clean fclean re
+
