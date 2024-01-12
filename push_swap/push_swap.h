@@ -17,7 +17,7 @@ typedef struct s_list
 
 int		create_stack(char **input, t_list **list_a);
 //listfunctions
-void	*create_node(t_list **head, int data);
+void	create_node(t_list **head, int data);
 void	add_to_begin(t_list **tail, int data);
 void	add_to_end(t_list **head, int data);
 

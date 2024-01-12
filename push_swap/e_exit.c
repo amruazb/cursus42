@@ -15,8 +15,7 @@ void ft_exit(t_list *list_a)
 void	free_list(t_list *list)
 {
 	t_list *tmp;
-
-	tmp = list;
+	tmp = NULL;
 	while (tmp)
 	{
 		tmp = tmp->next;
@@ -30,6 +29,8 @@ void	free_splits(char **splits)
 	int i;
 
 	i = 0;
+	if (splits == NULL)
+		return ;
 	while (splits[i])
 	{
 		free(splits[i]);
@@ -47,6 +48,8 @@ int is_dup(t_list *list, int data)
 		if (tmp->data == data)
 			return (1);
 		tmp = tmp->next;
+		if (tmp == list)
+			break ;
 	}
 	return (0);
 }

@@ -1,20 +1,15 @@
 #include "push_swap.h"
 
-void	*create_node(t_list **head, int data)
+void	create_node(t_list **head, int data)
 {
 	t_list	*tmp;
 
 	tmp = malloc(sizeof(t_list));
-	if (!tmp)
-	{
-		return (NULL);
-	}
 	tmp->prev = tmp;
 	tmp->data = data;
 	tmp->next = tmp;
 	(*head) = tmp;
 
-	return (tmp);
 }
 
 void	add_to_begin(t_list **tail, int data)
@@ -54,9 +49,13 @@ int	is_sort(t_list *list)
 	tmp = list;
 	while (tmp->next)
 	{
+		printf("tmp->data: %d\n", tmp->data);
+		printf("tmp->next->data: %d\n", tmp->next->data);
 		if (tmp->data > tmp->next->data)
 			return (0);
 		tmp = tmp->next;
+		if (tmp == list)
+			break ;
 	}
 	return (1);
 }

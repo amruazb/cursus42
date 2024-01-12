@@ -8,7 +8,7 @@ char **ps_split(char *s)
 	char *current;
 
 	i = 0;
-	split = malloc(501);
+	split = malloc(1001);
 	if (!split)
 		return (NULL);
 	while (*s == ' ' && *s++)
