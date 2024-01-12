@@ -37,10 +37,10 @@ void	add_to_end(t_list **head, int data)
 	if (!(*head))
 		return ;
 	tmp = (*head)->prev;
-	tmp->next = new;
-	new->prev = tmp;
 	new->next = (*head);
 	(*head)->prev = new;
+	tmp->next = new;
+	(*head) = new;
 }
 int	is_sort(t_list *list)
 {
@@ -49,8 +49,8 @@ int	is_sort(t_list *list)
 	tmp = list;
 	while (tmp->next)
 	{
-		printf("tmp->data: %d\n", tmp->data);
-		printf("tmp->next->data: %d\n", tmp->next->data);
+		// printf("tmp->data: %d\n", tmp->data);
+		// printf("tmp->next->data: %d\n", tmp->next->data);
 		if (tmp->data > tmp->next->data)
 			return (0);
 		tmp = tmp->next;
