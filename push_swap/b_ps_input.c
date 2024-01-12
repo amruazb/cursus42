@@ -53,29 +53,29 @@ int is_zero(int p_ati, char *w)
 
 int ps_atoi(const char *l)
 {
-	long long num;
-	int			n;
+    long long num;
+    int n;
 
-	num = 0;
-	n = 1;
-	while (*l == ' ' || (*l >= 9 && *l <= 13))
-		l++;
-	if ((*l == '+' || *l == '-') && (*(l + 1) && *(l + 1) >= '0' && *(l + 1) <= '9'))
-	{
-		if (*l == '-')
-			n *= -1;
-		l++;
-	}
-	while (*l >= '0' && *l <= '9')
-	{
-		num = num * 10 + *l - '0';
-		if ((n == -1 && num * n < INT_MIN) || (n == 1 && n > INT_MAX))
-			return (0);
-		l++;
-	}
-	if ((*l && *l < '0') || (*l && *l > '9'))
-		return (0);
-	return (num * n);
+    num = 0;
+    n = 1;
+    while (*l == ' ' || (*l >= 9 && *l <= 13))
+        l++;
+    if ((*l == '+' || *l == '-') && (*(l + 1) && *(l + 1) >= '0' && *(l + 1) <= '9'))
+    {
+        if (*l == '-')
+            n = -1;
+        l++;
+    }
+    while (*l >= '0' && *l <= '9')
+    {
+        num = num * 10 + *l - '0';
+        if ((n == -1 && num * n < INT_MIN) || (n == 1 && num > INT_MAX))
+            return (0);
+        l++;
+    }
+    if ((*l && *l < '0') || (*l && *l > '9'))
+        return (0);
+    return (num * n);
 }
 
 void ft_putstr(char *c)
@@ -84,19 +84,17 @@ void ft_putstr(char *c)
 		write(1,c++,1);
 }
 
-/*int main()
+void ft_putnbr(int n)
 {
-	t_list* head = NULL;
-	t_list* ptr;
-
-	head = createlist(head);
-
-	ptr = head;
-	while (ptr)
+	int i;
+	
+	if (n < 0)
 	{
-		printf("%d ", ptr->data);
-		ptr = ptr->next;
+		write(1, "-", 1);
+		n = -n;
 	}
-
-}*/
-
+	if (n > 9)
+		ft_putnbr(n / 10);
+	i = (n % 10) + '0';
+	write(1, &i, 1);
+}

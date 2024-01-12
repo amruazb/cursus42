@@ -1,50 +1,29 @@
 #include "push_swap.h"
 
-t_list *create_node(int data)
-{
-	t_list *node;
-
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->data = data;
-	node->prev = NULL;
-	node->next = NULL;
-	return (node);
-}
-
-void	add_to_list(t_list **list, int data)
-{
-	t_list	*new_node;
-
-	new_node = create_node(data);
-	if (!new_node)
-		return ;
-	if (*list)
-	{
-		new_node->next = *list;
-		(*list)->prev = new_node;
-	}
-	*list = new_node;
-}
-
 int	create_stack(char **input, t_list **list_a)
 {
 	char **splits;
 	int		parsed;
 	int		i;
+	(void)list_a;
 	
-	i = 0;
 	while (*input)
 	{
 		splits = ps_split(*input);
 		if (!splits)
 			return (0);
+		i = 0;
 		while (splits[i])
 		{
 			parsed = ps_atoi(splits[i]);
-			printf("%d ", parsed);
-			add_to_list(list_a, parsed);
+			printf("parsed: %d\n", parsed);
+			if((is_zero(parsed, splits[i])) || is_dup(*list_a, parsed))
+					ft_pexit(*list_a, splits);
+			create_node(list_a,parsed);
+			// add_to_begin(list_a, parsed);
+			// printf("list_a->data: %d\n", (*list_a)->data);
+			// if(is_sort(*list_a))
+			// 	ft_exit(*list_a);
 			i++;
 		}
 		free(splits);
