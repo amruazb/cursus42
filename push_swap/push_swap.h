@@ -15,7 +15,7 @@ typedef struct s_list
 }	t_list;
 
 
-int		create_stack(char **input, t_list **list_a);
+void		create_stack(char **input);
 //listfunctions
 void	create_node(t_list **head, int data);
 void	add_to_begin(t_list **tail, int data);
@@ -28,6 +28,10 @@ char	**ps_split(char *s);
 int		is_zero(int p_ati, char *w);
 int		ps_atoi(const char *l);
 int		is_sort(t_list *list);
+int    lst_size(t_list *list);
+int		is_sorted(t_list *list);
+
+
 //printingfunctions
 void ft_putstr(char *c);
 void ft_putnbr(int n);

@@ -33,29 +33,56 @@ void	add_to_end(t_list **head, int data)
 	t_list	*new;
 	t_list	*tmp;
 
+	// new = malloc(sizeof(t_list));
+	// if(!new)
+	// 	return ;
 	create_node(&new, data);
 	if (!(*head))
 		return ;
 	tmp = (*head)->prev;
+	tmp->next = (*head);
+	new->prev = tmp;
 	new->next = (*head);
 	(*head)->prev = new;
-	tmp->next = new;
-	(*head) = new;
+	// printf("new->data: %d\n", new->data);
 }
+
+int	lst_size(t_list *list)
+{
+	int size;
+	int data;
+
+	size = 1;
+	data = list->data;
+	list = list->next;
+	while(data != list->data)
+	{
+		size++;
+		list = list->next;
+	}
+	return (size);
+}
+
 int	is_sort(t_list *list)
 {
 	t_list *tmp;
+	int i;
+	int size;
 
 	tmp = list;
-	while (tmp->next)
+	size = lst_size(list);
+	i = 0;
+	while (i < size)
 	{
-		// printf("tmp->data: %d\n", tmp->data);
-		// printf("tmp->next->data: %d\n", tmp->next->data);
 		if (tmp->data > tmp->next->data)
-			return (0);
-		tmp = tmp->next;
-		if (tmp == list)
 			break ;
+		tmp = tmp->next;
+		i++;
 	}
-	return (1);
+	printf("is_sort size\n%d\n", size);
+	if (i + 1 < size)
+		return (0);
+	else
+		return (1);
+	return (0);
 }

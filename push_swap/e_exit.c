@@ -10,6 +10,7 @@ void ft_pexit(t_list *list_a, char **splits)
 void ft_exit(t_list *list_a)
 {
 	free_list(list_a);
+	ft_putstr("sorted exit\n");
 	exit(1);
 }
 void	free_list(t_list *list)
@@ -41,7 +42,6 @@ void	free_splits(char **splits)
 int is_dup(t_list *list, int data)
 {
 	t_list *tmp;
-
 	tmp = list;
 	while (tmp)
 	{
@@ -50,6 +50,7 @@ int is_dup(t_list *list, int data)
 		tmp = tmp->next;
 		if (tmp == list)
 			break ;
+printf("im here in is_dup\n");
 	}
 	return (0);
 }
