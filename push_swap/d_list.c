@@ -3,7 +3,7 @@
 void	create_node(t_list **head, int data)
 {
 	t_list	*tmp;
-
+	
 	tmp = malloc(sizeof(t_list));
 	tmp->prev = tmp;
 	tmp->data = data;
@@ -20,6 +20,7 @@ void	add_to_begin(t_list **tail, int data)
 	create_node(&new, data);
 	if (!(*tail))
 	{
+		(*tail) = new;
 		return ;
 	}
 	tmp = (*tail)->prev;
@@ -33,18 +34,17 @@ void	add_to_end(t_list **head, int data)
 	t_list	*new;
 	t_list	*tmp;
 
-	// new = malloc(sizeof(t_list));
-	// if(!new)
-	// 	return ;
 	create_node(&new, data);
 	if (!(*head))
+	{
+		(*head) = new;
 		return ;
+	}
 	tmp = (*head)->prev;
-	tmp->next = (*head);
+	tmp->next = new;
 	new->prev = tmp;
 	new->next = (*head);
 	(*head)->prev = new;
-	// printf("new->data: %d\n", new->data);
 }
 
 int	lst_size(t_list *list)

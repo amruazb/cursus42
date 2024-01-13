@@ -50,7 +50,6 @@ int is_dup(t_list *list, int data)
 		tmp = tmp->next;
 		if (tmp == list)
 			break ;
-printf("im here in is_dup\n");
 	}
 	return (0);
 }
