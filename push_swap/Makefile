@@ -1,10 +1,9 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror 
 
-SRC = a_push_swap.c b_ps_input.c c_create_node.c d_list.c \
-		 e_exit.c f_moves1.c g_moves2.c h_moves3.c i_utils.c i_init_list.c \
-		 s_a_sort_ft.c s_b_sort_small.c s_c_sort_small2.c sm_a_sort_medium.c \
-		 sn_a_sort_large.c
+SRC = c_list_create_utils.c d_sort_utils.c g_moves2.c s_a_sort_ft.c sm_a_sort_medium.c \
+	a_ps_input.c e_errorhandle.c push_swap.c s_b_sort_small.c sn_a_sort_large.c \
+	b_create_stack.c d_indexlist.c f_moves1.c s_c_sort_small2.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   g_moves2.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 18:02:17 by aabashee          #+#    #+#             */
+/*   Updated: 2024/01/15 18:55:30 by aabashee         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void ra(t_list **list_a)
+void	ra(t_list **list_a)
 {
-    *list_a = (*list_a)->next; // Move the top node to the next position
-    ft_putstr("ra\n");
+	*list_a = (*list_a)->next;
+	ft_putstr("ra\n");
 }
 
 void	rb(t_list **list_b)
@@ -12,20 +24,20 @@ void	rb(t_list **list_b)
 	ft_putstr("rb\n");
 }
 
-void   rr(t_list **list_a, t_list **list_b)
+void	rr(t_list **list_a, t_list **list_b)
 {
 	(*list_a) = (*list_a)->next;
 	(*list_b) = (*list_b)->next;
 	ft_putstr("rr\n");
 }
 
-void    rra(t_list **list_a)
+void	rra(t_list **list_a)
 {
 	(*list_a) = (*list_a)->prev;
 	ft_putstr("rra\n");
 }
 
-void rrb(t_list **list_b)
+void	rrb(t_list **list_b)
 {
 	(*list_b) = (*list_b)->prev;
 	ft_putstr("rrb\n");

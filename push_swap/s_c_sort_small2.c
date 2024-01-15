@@ -1,4 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   s_c_sort_small2.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 17:38:31 by aabashee          #+#    #+#             */
+/*   Updated: 2024/01/15 21:51:17 by aabashee         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
+
+void	sort_4_num_com_move(t_list **list_a, t_list **list_b)
+{
+	pb(list_a, list_b);
+	sort_3_num(list_a);
+	pa(list_a, list_b);
+}
+
+void	sort_4_num_cont(t_list **list_a, t_list **list_b, int pos)
+{
+	if (pos == 3)
+	{
+		rra(list_a);
+		rra(list_a);
+		sort_4_num_com_move(list_a, list_b);
+	}
+	if (pos == 4)
+	{
+		rra(list_a);
+		if (is_sorted(*list_a))
+			return ;
+		sort_4_num_com_move(list_a, list_b);
+	}
+}
 
 void	sort_4_num(t_list **list_a, t_list **list_b)
 {
@@ -21,28 +57,15 @@ void	sort_4_num(t_list **list_a, t_list **list_b)
 	sort_4_num_cont(list_a, list_b, pos);
 }
 
-void	sort_4_num_com_move(t_list **list_a, t_list **list_b)
+void	sort_more_cont(t_list **list_a, t_list **list_b, int i)
 {
-	pb(list_a, list_b);
-	sort_3_num(list_a);
-	pa(list_a, list_b);
-}
-void	sort_4_num_cont(t_list **list_a, t_list **list_b, int pos)
-{
-	if (pos == 3)
+	while (i)
 	{
-		rra(list_a);
-		rra(list_a);
-		sort_4_num_com_move(list_a, list_b);
-	}
-	if (pos == 4)
-	{
-		rra(list_a);
-		if (is_sorted(*list_a))
-			return ;
-		sort_4_num_com_move(list_a, list_b);
+		pa(list_a, list_b);
+		i--;
 	}
 }
+
 void	sort_more(t_list **list_a, t_list **list_b)
 {
 	int	i[5];
@@ -69,13 +92,4 @@ void	sort_more(t_list **list_a, t_list **list_b)
 	}
 	sort_4_num(list_a, list_b);
 	sort_more_cont(list_a, list_b, i[0]);
-}
-
-void	sort_more_cont(t_list **list_a, t_list **list_b, int i)
-{
-	while (i >= 0)
-	{
-		pa(list_a, list_b);
-		i--;
-	}
 }

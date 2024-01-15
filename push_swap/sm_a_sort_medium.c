@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sm_a_sort_medium.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 18:03:08 by aabashee          #+#    #+#             */
+/*   Updated: 2024/01/15 18:46:10 by aabashee         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	sort_medium_chunk(t_list **list_a, t_list **list_b)
@@ -30,7 +42,6 @@ void	sort_medium_chunk(t_list **list_a, t_list **list_b)
 void	push_the_chunk(t_list **list_a, t_list **list_b, int min, int max)
 {
 	int	size;
-	int	i = 0;
 
 	while (1)
 	{
@@ -39,24 +50,11 @@ void	push_the_chunk(t_list **list_a, t_list **list_b, int min, int max)
 			pb(list_a, list_b);
 			if ((*list_b)->data <= (min + max) / 2)
 				rb(list_b);
-			printf("---------------------------------\n");
-			print_list(*list_b, *list_b, lst_size(*list_b));
-			printf("---------------------------------\n");
 		}
 		else
-		{
-		printf("min = %d, max = %d\n", min, max);
-		printf("data = %d\n", (*list_a)->data);
-			ra(list_a);	
-		}
+			ra(list_a);
 		if (*list_b)
 		{
-			i++;
-			if (i == 35) {
-			printf("lst_size = %d\n", lst_size(*list_b));
-			print_list(*list_b, *list_b, lst_size(*list_b));
-			exit(0);
-			}
 			size = lst_size(*list_b);
 			if (size == max + 1)
 				break ;
