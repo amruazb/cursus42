@@ -8,7 +8,7 @@ char **ps_split(char *s)
 	char *current;
 
 	i = 0;
-	split = malloc(1001);
+	split = malloc(1024);
 	if (!split)
 		return (NULL);
 	while (*s == ' ' && *s++)
@@ -29,25 +29,7 @@ char **ps_split(char *s)
 	return (split);
 }
 
-int is_zero(int p_ati, char *w)
-{
-	int z;
-	z = 0;
-	if (p_ati == 0)
-	{
-		while (w[z])
-		{
-			if ((w[z] == '-' || w[z] == '+') && (w[z + 1] && w[z + 1] >= '0' && w[z + 1] <= '9'))
-				z++;
-			while (w[z] == '0')
-				z++;
-			if (w[z])
-				return (1);
-		}
-		return (0);
-	}
-	return (0);
-}
+
 
 
 

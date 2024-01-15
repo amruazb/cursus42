@@ -16,12 +16,17 @@ void ft_exit(t_list *list_a)
 void	free_list(t_list *list)
 {
 	t_list *tmp;
+	t_list *head;
+	
 	tmp = NULL;
-	while (tmp)
+	head = list;
+	while (list)
 	{
-		tmp = tmp->next;
+		tmp = list->next;
 		free(list);
 		list = tmp;
+		if (head == list)
+			break ;
 	}
 }
 
@@ -39,30 +44,17 @@ void	free_splits(char **splits)
 	}
 	free(splits);
 }
-int is_dup(t_list *list, int data)
-{
-	t_list *tmp;
-	tmp = list;
-	while (tmp)
-	{
-		if (tmp->data == data)
-			return (1);
-		tmp = tmp->next;
-		if (tmp == list)
-			break ;
-	}
-	return (0);
-}
+
 void    del_node(t_list **list)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
-	if (!(*list))
+	if ((*list) == NULL)
 		return ;
-	tmp = *list;
+	tmp = (*list);
 	if (tmp == (*list)->next)
 	{
-		free(tmp);
+		free(*list);
 		(*list) = NULL;
 		return ;
 	}

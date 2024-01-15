@@ -1,9 +1,9 @@
 #include "push_swap.h"
 
-void    ra(t_list **list_a)
+void ra(t_list **list_a)
 {
-	(*list_a) = (*list_a)->next;
-	ft_putstr("ra\n");
+    *list_a = (*list_a)->next; // Move the top node to the next position
+    ft_putstr("ra\n");
 }
 
 void	rb(t_list **list_b)

@@ -40,7 +40,7 @@ void	pa(t_list **list_a, t_list **list_b)
 	if (!(*list_b))
 		return ;
 	tmp = (*list_b)->data;
-	del_node(list_b);
+	del_node(&(*list_b));
 	if (!(*list_a))
 		create_node(&(*list_a),tmp);
 	else
@@ -54,7 +54,7 @@ void    pb(t_list **list_a, t_list **list_b)
 	if (!(*list_a))
 		return ;
 	tmp = (*list_a)->data;
-	del_node(list_a);
+	del_node(&(*list_a));
 	if (!(*list_b))
 		create_node(&(*list_b),tmp);
 	else

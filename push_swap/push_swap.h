@@ -21,21 +21,51 @@ void	create_node(t_list **head, int data);
 void	add_to_begin(t_list **tail, int data);
 void	add_to_end(t_list **head, int data);
 
+//listfunctions2
+void	ft_init_list(t_list **list_a, t_list **init_list);
+void	custom_init_list(t_list **init_list, int i);
+
 
 //utils
 int		is_dup(t_list *list, int data);
 char	**ps_split(char *s);
 int		is_zero(int p_ati, char *w);
 int		ps_atoi(const char *l);
-int		is_sort(t_list *list);
 int    lst_size(t_list *list);
 int		is_sorted(t_list *list);
+//sorting functions
+void	sort_list(t_list **list_b , t_list **init_list);
+
+//sort functions until 34
+void	sort_small_chunk(t_list **list_a, t_list **list_b, int len);
+void	sort_2_num(t_list **list_a);
+void	sort_3_num(t_list **list_a);
+void	sort_3_num_cont(t_list **list_a);
+void	sort_4_num(t_list **list_a, t_list **list_b);
+void	sort_4_num_com_move(t_list **list_a, t_list **list_b);
+void	sort_4_num_cont(t_list **list_a, t_list **list_b, int pos);
+//more
+void	sort_more(t_list **list_a, t_list **list_b);
+void	sort_more_cont(t_list **list_a, t_list **list_b, int i);
+void	sort_large_chunk(t_list **list_a, t_list **list_b);
+
+
+//sort functions until 134
+void	sort_medium_chunk(t_list **list_a, t_list **list_b);
+void	push_the_chunk(t_list **list_a, t_list **list_b, int min, int max);
+void	sort_the_push_chunk(t_list **list_a, t_list **list_b);
+
+
+
+//sort_utils
+int		find_min(t_list *list);
+int		find_max(t_list *list);
+int		find_position(t_list *list, int data);
 
 
 //printingfunctions
-void ft_putstr(char *c);
-void ft_putnbr(int n);
-void	print_list(t_list *list);
+void	ft_putstr(char *c);
+void	print_list(t_list *a, t_list *tmpa, int len);
 //freefunctions
 void    del_node(t_list **list);
 void	ft_pexit(t_list *list_a, char **splits);
