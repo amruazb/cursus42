@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 21:26:15 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/15 22:30:55 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:56:04 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ void	ft_pexit(t_list *list_a, char **splits);
 void	ft_exit(t_list *list_a);
 void	free_list(t_list *list);
 void	free_splits(char **splits);
+void	ft_exit2(t_list *list_a, t_list *list_b, t_list *init_list);
+
 //moves
 void	sa(t_list **list_a);
 void	sb(t_list **list_b);

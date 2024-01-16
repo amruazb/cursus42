@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:38:46 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/15 18:19:44 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:33:47 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ char	**ps_split(char *s)
 	char	*current;
 
 	i = 0;
-	split = malloc(1024);
+	split = malloc(sizeof(char *) * 1024);
 	if (!split)
 		return (NULL);
 	while (*s == ' ' && *s++)
 		;
 	while (*s)
 	{
-		split[i] = malloc(1024);
+		split[i] = malloc(sizeof(char) * 1024);
 		if (!split[i])
 			return (NULL);
 		current = split[i++];

@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:02:25 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/15 22:36:30 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:55:19 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ void	print_list(t_list *a, t_list *tmpa, int len)
 		tmpa = tmpa->next;
 		len--;
 	}
+}
+
+void	ft_exit2(t_list *list_a, t_list *list_b, t_list *init_list)
+{
+	free_list(list_b);
+	free_list(init_list);
+	ft_exit(list_a);
 }
 
 void	sort_list(t_list **list_b, t_list **init_list)
@@ -56,8 +63,11 @@ int	main(int ac, char **av)
 		list_a = create_stack(++av);
 		ft_init_list(&list_a, &init_list);
 		if (is_sorted(list_a))
+		{
+			free_list(init_list);
 			ft_exit(list_a);
+		}
 		sort_list(&list_b, &init_list);
+		ft_exit2(list_a, list_b, init_list);
 	}
-	return (0);
 }
