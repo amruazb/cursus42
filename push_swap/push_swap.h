@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 21:26:15 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/16 13:56:04 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:26:55 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,11 @@ int		find_position(t_list *list, int data);
 void	ft_putstr(char *c);
 void	print_list(t_list *a, t_list *tmpa, int len);
 //freefunctions
+int		arg_checker(char **av);
 void	del_first_node(t_list **list);
 void	ft_pexit(t_list *list_a, char **splits);
 void	ft_exit(t_list *list_a);
+void	ft_exit3(void);
 void	free_list(t_list *list);
 void	free_splits(char **splits);
 void	ft_exit2(t_list *list_a, t_list *list_b, t_list *init_list);

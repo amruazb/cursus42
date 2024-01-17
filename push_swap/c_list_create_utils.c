@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 17:39:08 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/15 22:03:06 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:30:00 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,10 @@ void	add_to_end(t_list **head, int data)
 	new->prev = tmp;
 	new->next = (*head);
 	(*head)->prev = new;
+}
+
+void	ft_exit3(void)
+{
+	ft_putstr("Error\n");
+	exit(1);
 }

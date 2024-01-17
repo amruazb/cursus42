@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g3
 
 SRC = c_list_create_utils.c d_sort_utils.c g_moves2.c s_a_sort_ft.c sm_a_sort_medium.c \
 	a_ps_input.c e_errorhandle.c push_swap.c s_b_sort_small.c sn_a_sort_large.c \
