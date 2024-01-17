@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:02:25 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/17 12:40:27 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:42:32 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int	arg_checker(char **av)
 	j = 0;
 	while (av[i])
 	{
+		j = 0;
 		if (av[i][j] == '\0')
 			return (0);
 		while (av[i][j] && av[i][j] == ' ')
