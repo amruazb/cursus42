@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:02:25 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/17 12:30:52 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:40:27 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	main(int ac, char **av)
 	init_list = NULL;
 	if (ac >= 2)
 	{
-		if (av[1] == NULL || arg_checker(av) == 0)
+		if (av[1] == NULL || !av[1][0] || arg_checker(av) == 0)
 			ft_exit3();
 		list_a = create_stack(++av);
 		if (list_a == NULL)
@@ -80,6 +80,8 @@ int	arg_checker(char **av)
 	j = 0;
 	while (av[i])
 	{
+		if (av[i][j] == '\0')
+			return (0);
 		while (av[i][j] && av[i][j] == ' ')
 		{
 			j++;
