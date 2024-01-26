@@ -3,8 +3,9 @@
 
 int main()
 {
-	int fd = open("sample.txt", O_RDONLY);
-	char *line = get_next_line(fd);
+	int fd;
+	fd = open("sample.txt", O_RDONLY);
+	char *line = get_next_line(5);
 	printf("Test case 1: %s\n", line);
 	free(line);
 	line = get_next_line(fd);

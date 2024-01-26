@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:07:37 by aabashee          #+#    #+#             */
-/*   Updated: 2023/12/12 12:42:48 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:37:45 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	*get_rest(char *remainder)
 
 char	*get_next_line(int fd)
 {
-	static char	*remainder[1024];
+	static char	*remainder[45];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || BUFFER_SIZE >= INT32_MAX)

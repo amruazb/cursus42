@@ -18,7 +18,7 @@ int	ft_putchar(char c)
 	return (1);
 }
 
-int	ft_putstr(const char *str)
+int	ft_putstr(char *str)
 {
 	int	count;
 
@@ -43,10 +43,7 @@ int	ft_putnbr(int num)
 		count++;
 		num = -num;
 	}
-	if (num < 0)
-		count += ft_putunsignbr((unsigned int)-num);
-	else
-		count += ft_putunsignbr((unsigned int)num);
+	count += ft_putunsignbr((unsigned int)num);
 	return (count);
 }
 
