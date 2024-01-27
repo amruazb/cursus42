@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/26 17:49:18 by aabashee          #+#    #+#             */
+/*   Updated: 2024/01/26 18:07:30 by aabashee         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minitalk.h"
 
 int	ft_isalpha(int c)
@@ -27,33 +39,6 @@ int	ft_atoi(const char *str)
 	}
 	return (num * negative);
 }
-// int	ft_atoi(const char *str)
-// {
-// 	u	result;
-// 	int				sign;
-
-// 	result = 0;
-// 	sign = 1;
-// 	i = 0;
-// 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-// 		i++;
-// 	if (str[i] == '-' || str[i] == '+') 
-// 	{
-// 		if (str[i] == '-')
-// 			sign = -1;
-// 		i++;
-// 	}
-// 	while (str[i] >= '0' && str[i] <= '9') 
-// 	{
-// 		result = result * 10 + (str[i] - 48);
-// 		i++;
-// 	}
-// 	if (result > 2147483647 && sign == 1)
-// 		return (-1);
-// 	if (result > 2147483648 && sign == -1)
-// 		return (0);
-// 	return (result * sign);
-// }
 
 void	ft_putnbr(int n)
 {
@@ -61,16 +46,13 @@ void	ft_putnbr(int n)
 
 	lng = n;
 	if (lng > 9)
-	{
-		ft_putnbr (lng / 10);
-		ft_putnbr (lng % 10);
-	}
-	ft_putchar(lng + '0');
+		ft_putnbr(lng / 10);
+	ft_putchar(lng % 10 + '0');
 }
 
 void	ft_putstr(char *s)
 {
-	while(*s)
+	while (*s)
 		write(1, s++, 1);
 }
 
