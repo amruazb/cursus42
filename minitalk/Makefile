@@ -4,7 +4,7 @@ SRC = client.c server.c utils.c
 CLIENT_NAME = client
 SERVER_NAME = server
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 
