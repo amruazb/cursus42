@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:53:42 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/27 20:13:10 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/28 08:21:58 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	killuser(char *message, int pid)
 		while (shift >= 0)
 		{
 			bit = (x >> shift) & 1;
-			if (bit == 1)
+			if (bit)
 				check = kill(pid, SIGUSR1);
 			else
 				check = kill(pid, SIGUSR2);
@@ -53,7 +53,7 @@ int	checker(int ac, char **av)
 	}
 	while (av[1][i])
 	{
-		if (ft_isalpha(av[1][i]) == 1)
+		if (ft_isalpha(av[1][i]))
 		{
 			ft_putstr("Error: Enter only numbers");
 			return (0);
