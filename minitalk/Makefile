@@ -1,6 +1,4 @@
 
-CLIENT = client.o
-SERVER = server.o
 SRC = client.c server.c utils.c
 
 CLIENT_NAME = client
