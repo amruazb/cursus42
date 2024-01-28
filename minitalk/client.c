@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:53:42 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/26 21:17:55 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:13:10 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	killuser(char *message, int pid)
 	int		check;
 
 	i = 0;
-	while (message[i] != '\0')
+	while (message[i])
 	{
 		x = message[i];
 		shift = 7;
@@ -38,7 +38,7 @@ void	killuser(char *message, int pid)
 		i++;
 	}
 	if (check == -1)
-		ft_putstr("Wrong pid");
+		ft_putstr("Wrong pid ");
 }
 
 int	checker(int ac, char **av)
@@ -48,7 +48,7 @@ int	checker(int ac, char **av)
 	i = 0;
 	if (ac != 3 || ac >= 4)
 	{
-		ft_putstr("Error: Enter three arguments");
+		ft_putstr("Error: Enter three arguments only");
 		return (0);
 	}
 	while (av[1][i])
