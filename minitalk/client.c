@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:53:42 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/28 08:21:58 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/02/04 20:13:51 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	killuser(char *message, int pid)
 			else
 				check = kill(pid, SIGUSR2);
 			shift--;
-			usleep(300);
+			usleep(5);
 		}
 		i++;
 	}
@@ -46,7 +46,7 @@ int	checker(int ac, char **av)
 	int	i;
 
 	i = 0;
-	if (ac != 3 || ac >= 4)
+	if (ac != 3 || ac > 3)
 	{
 		ft_putstr("Error: Enter three arguments only");
 		return (0);

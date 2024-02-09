@@ -6,22 +6,24 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:02:25 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/17 13:42:32 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/01/30 19:08:33 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void	print_list(t_list *a, t_list *tmpa, int len)
-// {
-// 	while (len)
-// 	{
-// 		printf("%d  ->  %d\n", a->data, tmpa->data);
-// 		a = a->next;
-// 		tmpa = tmpa->next;
-// 		len--;
-// 	}
-// }
+/* *
+void	print_list(t_list *a, t_list *tmpa, int len)
+{
+	while (len)
+	{
+		printf("%d  ->  %d\n", a->data, tmpa->data);
+		a = a->next;
+		tmpa = tmpa->next;
+		len--;
+	}
+}
+ */
 
 void	ft_exit2(t_list *list_a, t_list *list_b, t_list *init_list)
 {
