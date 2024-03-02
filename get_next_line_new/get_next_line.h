@@ -6,7 +6,7 @@
 /*   By: aabashee <aabashee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:57:52 by aabashee          #+#    #+#             */
-/*   Updated: 2024/01/09 13:19:31 by aabashee         ###   ########.fr       */
+/*   Updated: 2024/03/01 01:48:52 by aabashee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <limits.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 2147483647
 # endif
 
 char	*get_next_line(int fd);

@@ -7,16 +7,14 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := a.out
+NAME        := so_long
 CC        := clang
-FLAGS    := -Wall -Wextra -Werror 
-
+FLAGS    := -Wall -Wextra -Werror -g
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
 SRCS        :=      main.c \
-                          parsecheck.c \
                           
 OBJS        := $(SRCS:.c=.o)
 
@@ -90,3 +88,5 @@ endif
 re:			fclean all
 
 .PHONY:		all clean fclean re
+
+
