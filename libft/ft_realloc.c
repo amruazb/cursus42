@@ -12,7 +12,11 @@
 
 #include "libft.h"
 
+<<<<<<< HEAD
 void	*ft_realloc(void *ptr, size_t newsize)
+=======
+/* void	*ft_realloc(void *ptr, size_t newsize)
+>>>>>>> 4650a4e032a7c714976197d74347c8e12e17c3b4
 {
 	char	*newptr;
 	size_t	cursize;
@@ -23,9 +27,36 @@ void	*ft_realloc(void *ptr, size_t newsize)
 	if (newsize <= cursize)
 		return (ptr);
 	newptr = malloc(newsize);
+<<<<<<< HEAD
 	ft_memcpy(ptr, newptr, cursize);
 	free(ptr);
 	return (newptr);
+=======
+	ft_memcpy(ptr, newptr, cursize);//using ft_memcpy
+	free(ptr);
+	return (newptr);
+} */
+//without ft_memcpy
+void *ft_realloc(void *ptr, size_t newsize)
+{
+	char *newptr;
+	size_t cursize;
+	if (ptr == NULL)
+	return (malloc(newsize));
+	cursize = sizeof(ptr);
+	if (newsize <= cursize)
+	return ptr;
+	newptr = malloc(newsize);
+	// Copy memory byte by byte
+	size_t i = 0;
+	while(i < cursize)
+	{
+	((char *)newptr)[i] = ((char *)ptr)[i];
+		i++;
+	}
+	free(ptr);
+	return newptr;
+>>>>>>> 4650a4e032a7c714976197d74347c8e12e17c3b4
 }
 // size_t ft_realloc(void **buffer, size_t old_size)
 // {
